@@ -7,7 +7,7 @@ function Navbar() {
   return (
     <nav className="header">
       <h1 className="logo">
-        <a href="#">NextAuth</a>
+        <Link href="#">NextAuth</Link>
       </h1>
       <ul className="main-nav">
         <li>
@@ -28,7 +28,7 @@ function Navbar() {
 
         {!session ? (
           <li>
-            <a
+            <Link
               onClick={(e) => {
                 e.preventDefault();
                 signIn();
@@ -36,11 +36,11 @@ function Navbar() {
               href="/api/auth/signin"
             >
               Sign In
-            </a>
+            </Link>
           </li>
         ) : (
           <li>
-            <a
+            <Link
               onClick={(e) => {
                 e.preventDefault();
                 signOut();
@@ -48,7 +48,7 @@ function Navbar() {
               href="/api/auth/signout"
             >
               Sign Out
-            </a>
+            </Link>
           </li>
         )}
       </ul>
